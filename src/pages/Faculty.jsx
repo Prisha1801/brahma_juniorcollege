@@ -15,17 +15,17 @@ const Faculty = () => {
         },
         {
             name: "Prof. Neha Ahire",
-            image: "/faculties/MRS. NEHA AHIRE.png", // Replace with actual image path
+            image: "/faculties/mrs-neha-ahire.png", // Replace with actual image path
             role: "Faculty Member"
         },
         {
             name: "Prof. Sunita Bhosale",
-            image: "/faculties/MRS. SUNITA BHOSALE.png", // Replace with actual image path
+            image: "/faculties/mrs-sunita-bhosale.png", // Replace with actual image path
             role: "Faculty Member"
         },
         {
             name: "Prof. Dilip Shinde",
-            image: "/faculties/MR. DILIP SHINDE.png", // Replace with actual image path
+            image: "/faculties/mr-dilip-shinde.png", // Replace with actual image path
             role: "Faculty Member"
         }
     ];
@@ -101,7 +101,7 @@ const Faculty = () => {
                                         <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                                             {member.image && member.image !== "/faculty/placeholder.jpg" ? (
                                                 <img
-                                                src={encodeURI(member.image)}
+                                                src={member.image}
                                                 alt={member.name}
                                                 className="w-full h-full object-cover"
                                                 />

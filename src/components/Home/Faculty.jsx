@@ -10,17 +10,17 @@ const faculties = [
   {
     name: "MRS. NEHA AHIRE",
     designation: "CO - ORDINATOR , 11",
-    image: "/faculties/MRS. NEHA AHIRE.png",
+    image: "/faculties/mrs-neha-ahire.png",
   },
   {
     name: "MRS. SUNITA BHOSALE",
     designation: "SUPERVISION, 9,10",
-    image: "/faculties/MRS. SUNITA BHOSALE.png",
+    image: "/faculties/mrs-sunita-bhosale.png",
   },
   {
     name: "MR. DILIP SHINDE",
     designation: "CO - ORDINATOR , 12",
-    image: "/faculties/MR. DILIP SHINDE.png",
+    image: "/faculties/mr-dilip-shinde.png",
   },
   {
     name: "MR. SHERYA V. DEORE",

@@ -3,9 +3,18 @@ import { motion, useInView } from 'framer-motion';
 import HeroSection from "../common/components/HeroSection";
 import { libraryHero } from "../common/data/heroData";
 
+const libraryPdfs = [
+    { title: "Library Catalogue", path: "#" },
+    { title: "Journal List",      path: "#" },
+    { title: "Reference Books",   path: "#" },
+];
+
 const Library = () => {
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
+
+    const isSection1InView = useInView(section1Ref, { once: true, margin: "-100px" });
+    const isSection2InView = useInView(section2Ref, { once: true, margin: "-100px" });
 
     return (
         <div className="bg-gray-50 min-h-screen">
