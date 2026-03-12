@@ -2,8 +2,47 @@ import TopBar from './TopBar';
 import InfoBar from './InfoBar';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const FloatingButtons = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const footer = document.querySelector('footer');
+      
+      let shouldHide = false;
+      
+      // Hide near top
+      if (scrollY < 100) {
+        shouldHide = true;
+      }
+      
+      // Hide near footer
+      if (footer) {
+        const footerTop = footer.offsetTop;
+        if (scrollY + windowHeight >= footerTop) {
+          shouldHide = true;
+        }
+      }
+      
+      setIsVisible(!shouldHide);
+    };
+
+    // Run once on mount to set initial state
+    handleScroll();
+    
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <style>{`
@@ -29,7 +68,16 @@ const FloatingButtons = () => {
         }
       `}</style>
 
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[100] flex flex-col gap-2 mr-2">
+      <div 
+        className={`fixed right-0 top-[60%] md:top-1/2 -translate-y-1/2 z-[40] flex flex-col gap-2 mr-2 transition-all duration-400 ease-in-out ${
+          isVisible 
+            ? 'translate-x-0 opacity-100 pointer-events-auto' 
+            : 'translate-x-[110%] opacity-0 pointer-events-none'
+        }`}
+        style={{
+          transition: 'transform 0.4s ease, opacity 0.4s ease'
+        }}
+      >
         <Link
           to="/contact"
           className="shine-btn relative bg-[#1e4d5c] text-white font-semibold text-sm shadow-lg hover:bg-[#163a46] transition-colors flex items-center justify-center overflow-hidden border-2 border-white"

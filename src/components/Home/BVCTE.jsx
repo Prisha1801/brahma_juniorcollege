@@ -50,19 +50,16 @@ function BVCTE() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
 
-          {/* Video */}
-          <motion.div variants={itemVariants}>
-            <div className="relative w-full overflow-hidden rounded-xl shadow-lg">
-              <iframe
-                className="w-full h-[250px] md:h-[350px] lg:h-[400px]"
-                src="https://www.youtube.com/embed/IGlUUQ56wrw"
-                title="Brahma Valley Polytechnic Nashik"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </motion.div>
+          {/* Image */}
+<motion.div variants={itemVariants}>
+  <div className="relative w-full overflow-hidden rounded-xl shadow-lg">
+    <img
+      src="/images/brahmavally.avif"
+      alt="Brahma Valley Polytechnic Nashik"
+      className="w-full h-[250px] md:h-[350px] lg:h-[400px] object-cover"
+    />
+  </div>
+</motion.div>
 
           {/* Text Content */}
           <motion.div variants={itemVariants}>

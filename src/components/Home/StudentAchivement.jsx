@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // Container animation (stagger effect)
@@ -73,9 +71,9 @@ function StudentAchivement() {
                     <motion.div variants={itemVariants}>
                         <div className="relative w-full overflow-hidden rounded-xl shadow-lg">
                             <img
-                                src="../assets/images/achievements/IAS.jpg"
+                                src="/activities/a1.jpeg"
                                 alt="Student Achievement"
-                                className="w-full h-[250px] md:h-[350px] lg:h-[400px] object-contain"
+                                className="w-full h-[250px] md:h-[350px] lg:h-[400px] object-cover"
                             />
                         </div>
                     </motion.div>

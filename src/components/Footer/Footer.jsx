@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FiMail, FiPhone, FiGlobe } from "react-icons/fi";
@@ -26,6 +26,28 @@ const additionalLinks = [
 
 const Footer = () => {
     const [email, setEmail] = useState("");
+    const [showScrollTop, setShowScrollTop] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300);
+        };
+
+        // Run once on mount to set initial state
+        handleScroll();
+        
+        // Add scroll listener
+        window.addEventListener('scroll', handleScroll);
+        
+        // Cleanup on unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     const handleSubscribe = () => {
         console.log("Subscribed:", email);
@@ -33,7 +55,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-[#1a1a1a] text-white pt-14 pb-6">
+        <footer className="bg-[#1a1a1a] text-white pt-14 pb-6 relative">
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
 
                 {/* Top Grid Section */}
@@ -137,6 +159,22 @@ const Footer = () => {
                 </div>
 
             </div>
+            
+            {/* Scroll to Top Button */}
+            <button
+                onClick={scrollToTop}
+                className={`absolute bottom-6 right-6 w-12 h-12 bg-[#1e4d5c] text-white border-2 border-white rounded-full shadow-lg hover:bg-[#163a46] transition-colors flex items-center justify-center text-xl font-bold ${
+                    showScrollTop 
+                        ? 'opacity-100 translate-y-0' 
+                        : 'opacity-0 translate-y-2.5 pointer-events-none'
+                }`}
+                style={{
+                    transition: 'opacity 0.3s ease, transform 0.3s ease'
+                }}
+                aria-label="Scroll to top"
+            >
+                ↑
+            </button>
         </footer>
     );
 };

@@ -15,17 +15,17 @@ const Faculty = () => {
         },
         {
             name: "Prof. Neha Ahire",
-            image: "/faculty/placeholder.jpg", // Replace with actual image path
+            image: "/faculties/MRS. NEHA AHIRE.png", // Replace with actual image path
             role: "Faculty Member"
         },
         {
             name: "Prof. Sunita Bhosale",
-            image: "/faculty/placeholder.jpg", // Replace with actual image path
+            image: "/faculties/MRS. SUNITA BHOSALE.png", // Replace with actual image path
             role: "Faculty Member"
         },
         {
             name: "Prof. Dilip Shinde",
-            image: "/faculty/placeholder.jpg", // Replace with actual image path
+            image: "/faculties/MR. DILIP SHINDE.png", // Replace with actual image path
             role: "Faculty Member"
         }
     ];
@@ -99,15 +99,23 @@ const Faculty = () => {
                                 >
                                     <div className="relative overflow-hidden">
                                         <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                                            <div className="text-gray-400 text-center">
-                                                <div className="w-20 h-20 mx-auto mb-2 bg-gray-300 rounded-full flex items-center justify-center">
-                                                    <svg className="w-10 h-10 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                                            {member.image && member.image !== "/faculty/placeholder.jpg" ? (
+                                                <img
+                                                src={encodeURI(member.image)}
+                                                alt={member.name}
+                                                className="w-full h-full object-cover"
+                                                />
+                                            ) : (
+                                                <div className="text-gray-400 text-center">
+                                                <div className="w-20 h-20 mx-auto mb-2 bg-blue-50 rounded-full flex items-center justify-center">
+                                                    <svg viewBox="0 0 100 100" className="w-12 h-12" fill="none">
+                                                    <circle cx="50" cy="35" r="18" fill="#5b9bd5" />
+                                                    <ellipse cx="50" cy="80" rx="28" ry="20" fill="#5b9bd5" />
                                                     </svg>
                                                 </div>
-                                                <p className="text-sm">Faculty</p>
+                                                </div>
+                                            )}
                                             </div>
-                                        </div>
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
                                     <div className="p-6 text-center">
@@ -149,15 +157,23 @@ const Faculty = () => {
                                 >
                                     <div className="relative overflow-hidden">
                                         <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                                            <div className="text-gray-400 text-center">
-                                                <div className="w-20 h-20 mx-auto mb-2 bg-gray-300 rounded-full flex items-center justify-center">
-                                                    <svg className="w-10 h-10 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                                            {member.image && member.image !== "/faculty/placeholder.jpg" ? (
+                                                <img
+                                                src={encodeURI(member.image)}
+                                                alt={member.name}
+                                                className="w-full h-full object-cover"
+                                                />
+                                            ) : (
+                                                <div className="text-gray-400 text-center">
+                                                <div className="w-20 h-20 mx-auto mb-2 bg-blue-50 rounded-full flex items-center justify-center">
+                                                    <svg viewBox="0 0 100 100" className="w-12 h-12" fill="none">
+                                                    <circle cx="50" cy="35" r="18" fill="#5b9bd5" />
+                                                    <ellipse cx="50" cy="80" rx="28" ry="20" fill="#5b9bd5" />
                                                     </svg>
                                                 </div>
-                                                <p className="text-sm">Faculty</p>
+                                                </div>
+                                            )}
                                             </div>
-                                        </div>
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
                                     <div className="p-6 text-center">

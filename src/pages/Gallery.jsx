@@ -3,11 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GalleryHero } from "../components/common/data/heroData";
 import HeroSection from "../components/common/components/HeroSection";
 
+// ✅ Correct approach: Import images directly
+import a1 from "../../public/activities/a1.jpeg";
+import a2 from "../../public/activities/a2.jpg";
+
 const galleryData = [
   {
     title: "Activities",
-    folder: "images",
-    images: ["person.jpg"],
+    folder: "activities",
+    images: [a1, a2],
   },
 ];
 
@@ -49,7 +53,7 @@ const Gallery = () => {
         <div className="max-w-7xl mx-auto space-y-20">
           {galleryData.map((category, catIndex) => (
             <div key={catIndex}>
-              
+
               {/* Section Title */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -79,10 +83,11 @@ const Gallery = () => {
                     className="cursor-pointer rounded-xl overflow-hidden shadow-md bg-white"
                     onClick={() => openModal(category, index)}
                   >
+                    {/* ✅ img is already a resolved URL from the import */}
                     <img
-                      src={`/gallery/${category.folder}/${img}`}
-                      alt=""
-                      className="w-full h-48 object-contain"
+                      src={img}
+                      alt={`${category.title} ${index + 1}`}
+                      className="w-full h-48 object-cover"
                     />
                   </motion.div>
                 ))}
@@ -100,10 +105,11 @@ const Gallery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={closeModal}
           >
             {/* Close */}
             <button
-              className="absolute top-6 right-8 text-white text-4xl"
+              className="absolute top-6 right-8 text-white text-4xl z-10"
               onClick={closeModal}
             >
               ×
@@ -112,8 +118,8 @@ const Gallery = () => {
             {/* Left Button */}
             {currentCategory.images.length > 1 && (
               <button
-                onClick={prevImage}
-                className="absolute left-6 text-white text-5xl px-4"
+                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                className="absolute left-6 text-white text-5xl px-4 z-10"
               >
                 ‹
               </button>
@@ -122,19 +128,21 @@ const Gallery = () => {
             {/* Image */}
             <motion.img
               key={selectedImage}
-              src={`/gallery/${currentCategory.folder}/${selectedImage}`}
+              src={selectedImage}
+              alt="Gallery fullscreen"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.4 }}
               className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
             />
 
             {/* Right Button */}
             {currentCategory.images.length > 1 && (
               <button
-                onClick={nextImage}
-                className="absolute right-6 text-white text-5xl px-4"
+                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                className="absolute right-6 text-white text-5xl px-4 z-10"
               >
                 ›
               </button>

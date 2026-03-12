@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const activityImages = [
-    { src: "/images/person.jpg", alt: "Student Activity" },
+    { src: "/activities/a1.jpeg", alt: "Student Activity" },
+    { src: "/activities/a2.jpg", alt: "Student Activity" },
 ];
 
 const StudentActivities = () => {
@@ -34,7 +35,7 @@ const StudentActivities = () => {
                             <img
                                 src={img.src}
                                 alt={img.alt}
-                                className="w-full h-48 object-contain"
+                                className="w-full h-48 object-cover"
                                 onError={(e) => { e.target.src = "/images/person.jpg"; }}
                             />
                         </div>
