@@ -6,12 +6,16 @@ import HeroSection from "../components/common/components/HeroSection";
 // ✅ Correct approach: Import images directly
 import a1 from "../../public/activities/a1.jpeg";
 import a2 from "../../public/activities/a2.jpg";
+import a3 from "../../public/activities/a3.jpeg";
+import a4 from "../../public/activities/a4.jpeg";
+import a5 from "../../public/activities/a5.jpeg";
+import a6 from "../../public/activities/a6.jpeg";
 
 const galleryData = [
   {
     title: "Activities",
     folder: "activities",
-    images: [a1, a2],
+    images: [a1, a2, a3, a4, a5, a6],
   },
 ];
 

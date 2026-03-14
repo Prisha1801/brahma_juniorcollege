@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import HeroSection from '../common/components/HeroSection';
 import { campusDirectorHero } from '../common/data/heroData';
-import CampusDirectorImage from '/posters/campus-director.png';
+import CampusDirectorImage from '/posters/Gokul S. Talele.jpg';
 
 const CampusDirector = () => {
     return (
@@ -63,7 +63,7 @@ const CampusDirector = () => {
                             <div className="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-100 rounded-2xl blur opacity-25"></div>
                             <img
                                 src={CampusDirectorImage}
-                                alt="Dr. Suresh Patil"
+                                alt="Gokul S. Talele"
                                 className="relative 
                w-full 
                max-w-[320px] md:max-w-[360px] lg:max-w-[380px]
@@ -78,7 +78,7 @@ const CampusDirector = () => {
 
                         <div className="space-y-2">
                             <h3 className="text-2xl md:text-3xl font-extrabold text-[#003366] tracking-tight">
-                                Dr. Suresh Patil
+                                Gokul S. Talele
                             </h3>
                             <div className="flex flex-col items-center">
                                 <span className="text-lg font-semibold text-gray-600 uppercase tracking-widest">

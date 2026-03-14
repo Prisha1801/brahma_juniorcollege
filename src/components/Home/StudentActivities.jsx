@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 const activityImages = [
     { src: "/activities/a1.jpeg", alt: "Student Activity" },
     { src: "/activities/a2.jpg", alt: "Student Activity" },
+    { src: "/activities/a3.jpeg", alt: "Student Activity" },
+    { src: "/activities/a4.jpeg", alt: "Student Activity" },
 ];
 
 const StudentActivities = () => {

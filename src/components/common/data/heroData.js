@@ -75,9 +75,8 @@ export const vicePresidentHero = {
     overlay: true,
 };
 
-import CampusDirectorHeroImage from '/posters/hero.jpg';
 export const campusDirectorHero = {
-    backgroundImage: CampusDirectorHeroImage,
+    backgroundImage: ChairmanDeskHeroImage,
     title: "Campus Director's Desk",
     subtitle: "Discover excellence in education and innovation.",
     overlay: true,
