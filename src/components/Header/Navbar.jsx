@@ -181,7 +181,7 @@ const Navbar = () => {
     {
       title: "About Us",
       items: [
-        { label: "Chairmen's Desk", link: "/chairman-desk" },
+        { label: "Chairman's Desk", link: "/chairman-desk" },
         { label: "General Secretary's Desk", link: "/secretary-desk" },
         { label: "Vice Presidet Desk", link: "/vice-president-desk" },
         { label: "Campus Director's Desk", link: "/campus-director-desk" },
@@ -242,9 +242,8 @@ const Navbar = () => {
       {isSticky && <div style={{ height: navHeight }} />}
       <header
         ref={navRef}
-        className={`w-full bg-[#3F414C] text-white shadow-sm border-b border-gray-200 transition-all duration-200 ${
-          isSticky ? "fixed top-0 left-0 right-0 z-50" : "relative"
-        }`}
+        className={`w-full bg-[#3F414C] text-white shadow-sm border-b border-gray-200 transition-all duration-200 ${isSticky ? "fixed top-0 left-0 right-0 z-50" : "relative"
+          }`}
       >
         <nav className="w-full px-6 xl:px-10 py-3 flex items-center">
 
@@ -322,17 +321,15 @@ const Navbar = () => {
 
         {/* MOBILE OVERLAY */}
         <div
-          className={`fixed inset-0 bg-black/50 z-[60] transition-opacity duration-300 xl:hidden ${
-            isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+          className={`fixed inset-0 bg-black/50 z-[60] transition-opacity duration-300 xl:hidden ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
           onClick={closeMobileMenu}
         />
 
         {/* ── MOBILE SIDE MENU — all links BLACK ── */}
         <div
-          className={`fixed top-0 right-0 h-full w-[280px] bg-white z-[70] shadow-2xl transition-transform duration-300 ease-in-out transform xl:hidden ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed top-0 right-0 h-full w-[280px] bg-white z-[70] shadow-2xl transition-transform duration-300 ease-in-out transform xl:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="p-6 flex flex-col h-full overflow-y-auto">
             {/* Mobile header */}

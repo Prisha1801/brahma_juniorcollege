@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const facilities = [
   {
@@ -90,9 +91,11 @@ const Facilities = () => {
 
         {/* Button */}
         <div className="text-center mt-12">
-          <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-medium transition-all duration-300">
-            See More
-          </button>
+          <Link to="/library">
+            <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-medium transition-all duration-300 text-white">
+              See More
+            </button>
+          </Link>
         </div>
 
       </div>

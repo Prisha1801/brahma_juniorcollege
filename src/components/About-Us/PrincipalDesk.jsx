@@ -37,7 +37,7 @@ const PrincipalDesk = () => {
                                 className="text-center"
                             >
                                 <img
-                                    src=""
+                                    src="/images/person1.jpeg"
                                     alt="Principal"
                                     className="w-full max-h-[450px] object-contain rounded-xl shadow-md"
                                 />
