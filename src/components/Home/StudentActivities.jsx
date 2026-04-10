@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const activityImages = [
-    { src: "/activities/a1.jpeg", alt: "Student Activity" },
-    { src: "/activities/a2.jpg", alt: "Student Activity" },
-    { src: "/activities/a3.jpeg", alt: "Student Activity" },
-    { src: "/activities/a4.jpeg", alt: "Student Activity" },
+    { src: "/activities/img 1.jpg", alt: "Student Activity" },
+    { src: "/activities/img 2.jpg", alt: "Student Activity" },
+    { src: "/activities/img 3.jpg", alt: "Student Activity" },
+    { src: "/activities/img 4.jpeg", alt: "Student Activity" }
 ];
 
 const StudentActivities = () => {

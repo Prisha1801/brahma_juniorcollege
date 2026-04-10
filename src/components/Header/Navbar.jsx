@@ -194,8 +194,8 @@ const Navbar = () => {
     {
       title: "Sections",
       items: [
-        { label: "Primary", link: "/board-members" },
-        { label: "Secondary & High Secondary", link: "/chairman-desk" },
+        { label: "Primary", link: "https://bvps.brahmavalley.edu.in/", external: true },
+        { label: "Secondary & High Secondary", link: "/" },
       ],
     },
     {

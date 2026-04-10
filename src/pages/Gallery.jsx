@@ -3,19 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GalleryHero } from "../components/common/data/heroData";
 import HeroSection from "../components/common/components/HeroSection";
 
-// ✅ Correct approach: Import images directly
-import a1 from "../../public/activities/a1.jpeg";
-import a2 from "../../public/activities/a2.jpg";
-import a3 from "../../public/activities/a3.jpeg";
-import a4 from "../../public/activities/a4.jpeg";
-import a5 from "../../public/activities/a5.jpeg";
-import a6 from "../../public/activities/a6.jpeg";
-
+// Public assets: use root URLs (files live in public/activities/)
 const galleryData = [
   {
     title: "Activities",
     folder: "activities",
-    images: [a1, a2, a3, a4, a5, a6],
+    images: [
+      "/activities/img 1.jpg",
+      "/activities/img 2.jpg",
+      "/activities/img 3.jpg",
+      "/activities/img 4.jpeg"
+    ],
   },
 ];
 
@@ -87,7 +85,6 @@ const Gallery = () => {
                     className="cursor-pointer rounded-xl overflow-hidden shadow-md bg-white"
                     onClick={() => openModal(category, index)}
                   >
-                    {/* ✅ img is already a resolved URL from the import */}
                     <img
                       src={img}
                       alt={`${category.title} ${index + 1}`}

@@ -97,7 +97,7 @@ const Footer = () => {
                         <ul className="space-y-4 text-[15px] text-gray-300">
                             <li className="flex items-center gap-3">
                                 <FiMail className="flex-shrink-0" />
-                                <span>reply@brahmavalley.com</span>
+                                <span>info@brahmavalley.com</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <FiPhone className="flex-shrink-0" />
